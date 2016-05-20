@@ -716,6 +716,28 @@ from the `data` property:
 $id = Flight::request()->data->id;
 ```
 
+# Response
+
+Flight encapsulates the HTTP response into a single object, which can be
+accessed by doing:
+
+```php
+$request = Flight::response();
+```
+
+The response object provides the following properties:
+
+```
+cache - Sets caching headers for the response
+
+```
+You can set expiration content datetime.
+
+```php
+Flight::response()->cache(423423235);
+```
+
+
 # HTTP Caching
 
 Flight provides built-in support for HTTP level caching. If the caching condition
